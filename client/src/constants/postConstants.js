@@ -1,0 +1,2 @@
+export const POST_FETCH_ALL='POST_FETCH_ALL'
+export const POST_CREATE='POST_CREATE'
