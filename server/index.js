@@ -11,8 +11,8 @@ connectDB()
 const app = express()
 
 
-//app.use(express.limit('30mb'))
-app.use(express.json())
+
+app.use(express.urlencoded({ extended: false, limit: '30mb' }));
 
 app.use(cors())
 
