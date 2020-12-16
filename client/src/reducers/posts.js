@@ -1,11 +1,13 @@
-import{POST_CREATE,POST_FETCH_ALL} from "../constants/postConstants"
+import{CREATE,FETCH_ALL,UPDATE} from "../constants/postConstants"
 
 export const postReducer=(posts=[], action)=>{
     switch (action.type){
-        case POST_FETCH_ALL:
+        case FETCH_ALL:
         return action.payload;
-        case POST_CREATE:
-            return posts;
+        case CREATE:
+            return [...posts, action.payload]
+            case UPDATE:
+                return posts.map((post) => (post._id === action.payload._id ? action.payload : post));
             default:
             return posts
 

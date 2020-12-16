@@ -14,5 +14,6 @@ try {
 }
 
 }
+//mongoose.set('useFindAndModify', false);
 
 export default connectDB;
